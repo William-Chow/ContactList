@@ -93,6 +93,9 @@ public class ActContact extends BaseActivity<ContactPresenter> implements IView,
     @Override
     protected void onResume() {
         super.onResume();
+        if (null != mPresenter) {
+            mPresenter.updateOnResume();
+        }
     }
 
     @Override

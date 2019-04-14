@@ -137,6 +137,7 @@ public class ContactPresenter extends BasePresenter<UserRepository> {
                     msg.recycle();
                     contactAdapter.clear();
                     myContact = getContactData();
+                    PrefUtils.saveContactArrayList(activity, myContact, Constant.CONTACT_KEY);
                     contactAdapter.addContact(myContact);
                     contactAdapter.notifyDataSetChanged();
                 }
@@ -156,6 +157,15 @@ public class ContactPresenter extends BasePresenter<UserRepository> {
         Type listType = new TypeToken<List<Contact>>() {
         }.getType();
         return gson.fromJson(jsonString, listType);
+    }
+
+    public void updateOnResume() {
+        ArrayList<Contact> contactArrayList = PrefUtils.getContactArrayList(activity, Constant.CONTACT_KEY);
+        if (null != contactAdapter && contactArrayList.size() > 0) {
+            contactAdapter.clear();
+            contactAdapter.addContact(contactArrayList);
+            contactAdapter.notifyDataSetChanged();
+        }
     }
 
     @Override

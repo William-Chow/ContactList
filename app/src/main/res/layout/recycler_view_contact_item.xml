@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivContact"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_margin="@dimen/_5sdp"
+        android:contentDescription="@string/content_description" />
+
+    <TextView
+        android:id="@+id/tvContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/_2sdp"
+        android:layout_marginLeft="@dimen/_2sdp"
+        android:layout_toEndOf="@+id/ivContact"
+        android:layout_toRightOf="@+id/ivContact"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_12sdp" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2sdp"
+        android:layout_below="@+id/ivContact"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginLeft="@dimen/_8sdp"
+        android:background="@color/lightGrey" />
+
+</RelativeLayout>

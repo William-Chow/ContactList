@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Contact List</string>
+
+    <!-- Image View Usage -->
+    <string name="content_description">content description</string>
+
+    <!-- Contact -->
+    <string name="contactsTitle">Contacts</string>
+    <string name="refreshLabel">Refresh</string>
+    <string name="searchLog">Search button clicked&#8230;</string>
+
+    <!-- Contact Info-->
+    <string name="saveLabel">Save</string>
+    <string name="cancelLabel">Cancel</string>
+    <string name="mainInformationTitle">Main Information</string>
+    <string name="firstNameLabel">First Name</string>
+    <string name="lastNameLabel">Last Name</string>
+    <string name="subInformationTitle">Sub Information</string>
+    <string name="emailLabel">Email</string>
+    <string name="phoneLabel">Phone</string>
+
+    <string name="firstNameValidation">Please enter your first name&#8230;</string>
+    <string name="lastNameValidation">Please enter your last name&#8230;</string>
+    <string name="emailValidation">Email Invalid</string>
+
+    <string name="updateSuccessMessage">Update Contact Successful</string>
+    <string name="addSuccessMessage">Add Contact Successful</string>
+</resources>

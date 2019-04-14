@@ -70,7 +70,6 @@ public class ActContact extends BaseActivity<ContactPresenter> implements IView,
 
     private RxPermissions mRxPermissions;
 
-
     @Override
     public int initView(@Nullable Bundle savedInstanceState) {
         return R.layout.act_contact;
@@ -91,6 +90,10 @@ public class ActContact extends BaseActivity<ContactPresenter> implements IView,
         return new ContactPresenter(ArtUtils.obtainAppComponentFromContext(ActContact.this), mRxPermissions, ActContact.this.getApplication(), ActContact.this);
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
 
     @Override
     public void showLoading() {

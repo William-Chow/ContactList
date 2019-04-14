@@ -125,9 +125,9 @@ public class ActContactInfo extends BaseActivity<ContactInfoPresenter> implement
                 finish();
                 break;
             case R.id.rlRight:
-                if(null != mPresenter){
-                   Utils.hideKeyboard(ActContactInfo.this);
-                   mPresenter.inputChecking(Message.obtain(this, new Object[]{true}), contact, etFirstName.getText().toString().trim(), etLastName.getText().toString().trim(), etEmail.getText().toString().trim(), etPhone.getText().toString().trim());
+                if (null != mPresenter) {
+                    Utils.hideKeyboard(ActContactInfo.this);
+                    mPresenter.inputChecking(Message.obtain(this, new Object[]{true}), contact, etFirstName.getText().toString().trim(), etLastName.getText().toString().trim(), etEmail.getText().toString().trim(), etPhone.getText().toString().trim());
                 }
                 break;
             default:

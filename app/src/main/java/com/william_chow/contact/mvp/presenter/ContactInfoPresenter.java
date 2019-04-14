@@ -90,10 +90,10 @@ public class ContactInfoPresenter extends BasePresenter<UserRepository> {
         } else if (etLastName.length() == 0) {
             error = activity.getResources().getString(R.string.lastNameValidation);
             view.showMessage(error);
-        } else if(!Utils.isEmail_(etEmail)){
+        } else if (!Utils.isEmail_(etEmail)) {
             error = activity.getResources().getString(R.string.emailValidation);
             view.showMessage(error);
-        }else {
+        } else {
             updateJson(msg, contact, etFirstName, etLastName, etEmail, etPhone);
         }
     }
@@ -104,7 +104,7 @@ public class ContactInfoPresenter extends BasePresenter<UserRepository> {
         if (null != myContact) {
             if (null != contact) {
                 for (int i = 0; i < myContact.size(); i++) {
-                    if(contact.getId().equalsIgnoreCase(myContact.get(i).getId())){
+                    if (contact.getId().equalsIgnoreCase(myContact.get(i).getId())) {
                         myContact.get(i).setFirstName(etFirstName);
                         myContact.get(i).setLastName(etLastName);
                         myContact.get(i).setEmail(etEmail);
@@ -126,7 +126,7 @@ public class ContactInfoPresenter extends BasePresenter<UserRepository> {
         }
     }
 
-    private void addUpdateSuccess(Message msg, ArrayList<Contact> myContact, String message){
+    private void addUpdateSuccess(Message msg, ArrayList<Contact> myContact, String message) {
         IView view = msg.getTarget();
         PrefUtils.getInstance(mApplication).removeContactArrayList();
         PrefUtils.saveContactArrayList(activity, myContact, Constant.CONTACT_KEY);

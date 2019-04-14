@@ -27,7 +27,6 @@ import butterknife.ButterKnife;
 import me.jessyan.art.base.delegate.AppLifecycles;
 import me.jessyan.art.integration.cache.IntelligentCache;
 import me.jessyan.art.utils.ArtUtils;
-
 import timber.log.Timber;
 
 /**

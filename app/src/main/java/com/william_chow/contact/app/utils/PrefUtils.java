@@ -39,9 +39,9 @@ public class PrefUtils {
         editor.apply();
     }
 
-        /**
-         * Save and get ArrayList in SharedPreference
-         */
+    /**
+     * Save and get ArrayList in SharedPreference
+     */
     public static void saveContactArrayList(Activity _activity, List<Contact> contactArrayList, String key) {
         SharedPreferences prefs = _activity.getApplicationContext().getSharedPreferences(_activity.getString(R.string.app_name), Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();

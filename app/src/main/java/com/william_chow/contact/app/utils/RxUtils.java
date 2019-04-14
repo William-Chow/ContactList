@@ -40,7 +40,7 @@ public class RxUtils {
     }
 
     public static <T> ObservableTransformer<T, T> applySchedulers(final IView view) {
-        return new ObservableTransformer<T,T>() {
+        return new ObservableTransformer<T, T>() {
             @Override
             public Observable<T> apply(Observable<T> observable) {
                 return observable.subscribeOn(Schedulers.io())

@@ -41,7 +41,7 @@ import timber.log.Timber;
  * <a href="https://github.com/JessYanCoding">Follow me</a>
  * ================================================
  */
-public class FragmentLifecycleCallbacksImpl extends FragmentManager.FragmentLifecycleCallbacks{
+public class FragmentLifecycleCallbacksImpl extends FragmentManager.FragmentLifecycleCallbacks {
 
     @SuppressLint("BinaryOperationInTimber")
     @Override

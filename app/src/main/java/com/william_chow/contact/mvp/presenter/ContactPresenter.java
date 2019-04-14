@@ -132,9 +132,11 @@ public class ContactPresenter extends BasePresenter<UserRepository> {
         if (myContact.size() > 0) {
             if (pullToRefresh) {
                 if (null != contactAdapter) {
+                    // Get the List from Assets File
                     msg.getTarget().hideLoading();
                     msg.recycle();
                     contactAdapter.clear();
+                    myContact = getContactData();
                     contactAdapter.addContact(myContact);
                     contactAdapter.notifyDataSetChanged();
                 }

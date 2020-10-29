@@ -58,11 +58,11 @@ dependencies {
 
     //view
     implementation rootProject.ext.dependencies["sdp"]
-    implementation rootProject.ext.dependencies["circular-image"]
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
     annotationProcessor(rootProject.ext.dependencies["butterknife-compiler"]) {
         exclude module: 'support-annotations'
     }
-    implementation rootProject.ext.dependencies["paginate"]
+    implementation 'com.github.markomilos:paginate:1.0.0'
 
     //art
     implementation project(':art')
@@ -80,7 +80,7 @@ dependencies {
     implementation 'me.jessyan:art-imageloader-glide:2.5.0'
 
     //test
-    testImplementation rootProject.ext.dependencies["junit"]
+    testImplementation 'junit:junit:4.13.1'
     debugImplementation rootProject.ext.dependencies["canary-debug"]
     releaseImplementation rootProject.ext.dependencies["canary-release"]
     testImplementation rootProject.ext.dependencies["canary-release"]
